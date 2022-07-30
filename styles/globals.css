@@ -4,6 +4,23 @@
 
 @layer base {
     body.dark {
-        @apply bg-black text-white;
+        @apply bg-[#101010] text-white;
+    }
+    input:focus {
+        outline: 0;
+    }
+    input {
+        background: transparent;
+    }
+    .border,
+    .border-x,
+    .border-b {
+        @apply dark:border-neutral-700 border-neutral-300;
+    }
+    .background-transition {
+        @apply transition-[background] duration-100;
+    }
+    .background {
+        @apply dark:bg-[#101010] bg-white transition-[background] duration-100;
     }
 }

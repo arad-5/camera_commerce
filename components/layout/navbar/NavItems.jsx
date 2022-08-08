@@ -9,7 +9,7 @@ const NavItems = () => {
     return (
         <div className='h-full'>
             <button
-                className={`lg:hidden flex h-full w-10 relative border rounded-full ${isNavItemsOpen ? 'rotate-90' : ''} transition-transform`}
+                className={`lg:hidden flex h-full w-10 relative ${isNavItemsOpen ? 'rotate-90' : ''} transition-transform`}
                 onClick={() => setIsNavItemsOpen(curr => !curr)}
             >
                 {isNavItemsOpen ? <IoCloseSharp className='m-auto text-xl' /> : <AiOutlineMenu className='m-auto text-lg' />}

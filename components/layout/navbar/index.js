@@ -6,8 +6,8 @@ import NavItems from './NavItems'
 
 const Navbar = () => {
     return (
-        <div className='h-14 sticky top-0 left-0 border-b w-screen'>
-            <div className='px-2 container mx-auto h-full  justify-between items-center flex py-2'>
+        <div className='h-14 sticky sm:px-5 top-0 left-0 z-50 w-full px-2'>
+            <div className='px-2 container border-b dark:border-b-0 mx-auto rounded-b-3xl h-full background justify-between items-center flex py-2'>
                 <NavItems />
                 <div className='flex h-full space-x-4'>
                     <SearchBar />

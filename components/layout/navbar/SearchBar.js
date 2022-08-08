@@ -6,7 +6,7 @@ const SearchBar = () => {
     const input = useRef()
 
     return (
-        <div className='items-center min-w-[2.5rem] h-10 hover:shadow-md transition-shadow rounded-full flex md:dark:bg-neutral-900 border md:bg-neutral-100 justify-center'>
+        <div className='items-center min-w-[2.5rem] h-10 hover:shadow-md transition-shadow rounded-full flex md:dark:bg-neutral-900 md:bg-neutral-100 justify-center dark:border-neutral-700'>
             <button className='h-full w-full flex justify-center items-center md:hidden' onClick={() => {
                 setIsSearchBarOpen(curr => !curr)
                 input.current.focus()

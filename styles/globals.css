@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        @apply bg-neutral-200 min-w-[350px];
+    }
     body.dark {
-        @apply bg-[#101010] text-white;
+        @apply bg-[#181818] text-white;
     }
     input:focus {
         outline: 0;
@@ -12,15 +15,34 @@
     input {
         background: transparent;
     }
-    .border,
+    /* .border,
     .border-x,
-    .border-b {
-        @apply dark:border-neutral-700 border-neutral-300;
+    .border-b,
+    .border-r {
+        @apply border-neutral-300 dark:border-neutral-700;
+    } */
+    .border-primary {
+        @apply border-neutral-300 dark:border-neutral-700;
     }
     .background-transition {
         @apply transition-[background] duration-100;
     }
     .background {
         @apply dark:bg-[#101010] bg-white transition-[background] duration-100;
+    }
+
+    .image-container {
+        width: 100%;
+
+        > div {
+            position: unset !important;
+        }
+
+        .image {
+            object-fit: contain;
+            width: 100% !important;
+            position: relative !important;
+            height: unset !important;
+        }
     }
 }

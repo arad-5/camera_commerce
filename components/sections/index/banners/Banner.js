@@ -5,7 +5,7 @@ const Banner = ({ banner }) => {
     return (
         <div className='h-full'>
             <div className='h-[400px] md:static relative'>
-                <Image src={banner.banner.url} layout='fill' className='object-cover z-10' alt={banner.title} />
+                <Image src={banner.banner.url} quality={40} layout='fill' className='object-cover z-10' alt={banner.title} />
             </div>
             <div className='absolute w-full z-10 bottom-0 left-0 bg-gradient-to-t via-[#101010]/60 from-[#101010]'>
                 <div className='rounded-2xl rounded-bl-none'>

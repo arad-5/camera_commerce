@@ -15,8 +15,8 @@ export default function Home({ bestDealsProductsBanner, categories, indexMainBan
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <main className='pt-3 border'>
-                <header className='flex flex-col lg:flex-row md:space-x-5 space-y-5 md:space-y-0'>
-                    <div className='space-y-3 lg:w-2/3 row-span-2'>
+                <header className='flex flex-col lg:flex-row lg:space-x-5 space-y-5 md:space-y-0'>
+                    <div className='space-y-3 lg:w-2/3 xl:w-3/4 row-span-2'>
                         <CategoriesRowSlider categories={categories} />
                         <Banners banners={indexMainBanners} />
                     </div>
@@ -53,35 +53,35 @@ export const getStaticProps = async () => {
         }
     }`)
     const { products: bestDealsProductsBanner } = await request(`
-        {
-          products(where: {discount: {discountPercent_gt: 30}, bannerDetail: {}}) {
-            id
-			title
-			price
-			discount {
-				discountPrice
-				discountPercent
-			}
-			cardPicture {
-			url
-			}
-            bannerDetail {
+      {
+        products(where: {discount: {discountPercent_gt: 30}, bannerDetail: {}}) {
+				id
 				title
-				bannerVideo {
-				  id
+				price
+				discount {
+					discountPrice
+					discountPercent
 				}
-				bannerImage {
-				  url
+				cardPicture {
+					url
 				}
-            }
-            brand {
-              logo {
-                url
-              }
-              title
-            }
-          }
-    }
+				bannerDetail {
+					title
+					bannerVideo {
+						url
+					}
+					bannerImage {
+						url
+					}
+				}
+				brand {
+					title
+					logo {
+						url
+					}
+				}
+        	}
+      	}
       `)
     return {
         props: {

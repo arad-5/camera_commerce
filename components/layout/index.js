@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     const [isDark, setIsDark] = useState(false)
 
     return (
-        <div className='lg:container px-2 mx-auto'>
+        <div className='2xl:container px-2 mx-auto'>
             <Navbar/>
             {children}
             {/* <Footer /> */}

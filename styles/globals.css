@@ -45,4 +45,10 @@
             height: unset !important;
         }
     }
+    body.dark .swiper-pagination-bullet {
+        @apply bg-red-400 !important;
+    }
+    .mx-auto .swiper-pagination-bullet {
+        @apply bg-red-400 !important;
+    }
 }

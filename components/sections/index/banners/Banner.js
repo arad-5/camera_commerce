@@ -16,7 +16,7 @@ const Banner = ({ banner }) => {
                         </div>
                     </div>
                 </div>
-                <div className='md:p-5 p-2 pr-0 h-52 overflow-auto flex rounded-b-2xl md:bg-transparent bg-[#101010]'>
+                <div className='md:p-5 p-2 pr-0 h-52 overflow-auto flex rounded-b-2xl md:bg-transparent'>
                     {banner.products.map((product) => (
                         <ProductCard key={product.id} {...product} />
                     ))}

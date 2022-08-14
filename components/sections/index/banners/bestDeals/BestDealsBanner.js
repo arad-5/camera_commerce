@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react'
 import ProductCardRow from '../../../../product/ProductCardRow'
 import Image from 'next/image'
 
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 import 'swiper/css/effect-creative'
 
 // import required modules
@@ -17,7 +16,7 @@ import { HiChevronRight } from 'react-icons/hi'
 
 const BestDealsBanner = ({ bestDealsProductsBanner }) => {
     return (
-        <div className='flex flex-col justify-between dark:border-neutral-800 border rounded-3xl overflow-hidden'>
+        <div className='dark:border-neutral-800 dark:bg-neutral-900 border rounded-3xl overflow-hidden '>
             <div className='relative'>
                 <Swiper
                     spaceBetween={0}
@@ -42,6 +41,7 @@ const BestDealsBanner = ({ bestDealsProductsBanner }) => {
                 >
                     {bestDealsProductsBanner.map((productBanner) => {
                         const {
+                            id,
                             bannerDetail,
                             title: bannerTitle,
                             brand: {
@@ -51,7 +51,7 @@ const BestDealsBanner = ({ bestDealsProductsBanner }) => {
                         } = productBanner
 
                         return (
-                            <SwiperSlide key={productBanner.id} className='background rounded-3xl h-full p-2'>
+                            <SwiperSlide key={id} className='rounded-3xl bg-white h-full dark:bg-neutral-900 p-2'>
                                 {bannerDetail?.bannerVideo ? (
                                     <video controls autoPlay loop className='w-full rounded-3xl'>
                                         <source src={bannerDetail.bannerVideo.url} type='video/webm'></source>

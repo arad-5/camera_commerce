@@ -6,7 +6,7 @@ import { MdOutlineShoppingBasket } from 'react-icons/md'
 const ProductCardRow = ({ title, price, cardPicture, discount: { discountPrice, discountPercent }, discount }) => {
     console.log(discount)
     return (
-        <div className='rounded-xl flex border overflow-hidden cursor-pointer dark:border-neutral-800 hover:shadow-md transition-shadow w-full items-center py-2'>
+        <div className='rounded-xl flex border overflow-hidden cursor-pointer background dark:border-neutral-800 hover:shadow-md transition-shadow w-full items-center py-2'>
             <div className='xl:w-32 w-24 flex-shrink-0 items-center m-1'>
                 <Image src={cardPicture.url} alt={title} layout='responsive' width={70} height={50} className='object-cover rounded-lg' />
             </div>

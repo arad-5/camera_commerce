@@ -6,7 +6,7 @@ const Banners = ({ banners }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     return (
-        <section className={`relative background rounded-3xl overflow-hidden min-h-[600px]`}>
+        <section className={`relative background rounded-3xl overflow-hidden h-[calc(100%_-_4rem)]`}>
             <div className='px-5 py-3 absolute z-20 bg-gradient-to-b from-[#101010] w-full top-0 left-0 space-x-2'>
                 {banners.map((banner, tabIndex) => (
                     <button
@@ -18,7 +18,7 @@ const Banners = ({ banners }) => {
                     </button>
                 ))}
             </div>
-            <Banner key={banners[currentIndex].id} banner={banners[currentIndex]} />
+            <Banner banner={banners[currentIndex]} />
             {currentIndex > 0 && (
                 <button
                     onClick={() => setCurrentIndex((curr) => curr - 1)}

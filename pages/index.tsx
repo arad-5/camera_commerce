@@ -1,10 +1,11 @@
 import Head from 'next/head'
+import { GetStaticProps } from 'next'
 import Banners from '../components/sections/index/banners/Banners'
 import request from '../services/request'
 import CategoriesRowSlider from '../components/category/CategoriesRowSlider'
-import BestDeals from '../components/sections/index/banners/bestDeals'
+import BestDeals from '../components/sections/index/banners/bestDeals/index'
 
-export default function Home({ categories, bestDealsProductsBanner, bestDealsOffProducts, indexMainBanners }) {
+export default function Home({ categories, bestDealsProductsBanner, bestDealsOffProducts, indexMainBanners }): JSX.Element {
     console.log(bestDealsProductsBanner)
 
     return (
@@ -27,7 +28,7 @@ export default function Home({ categories, bestDealsProductsBanner, bestDealsOff
     )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
     const { indexMainBanners, categories } = await request(`{
         indexMainBanners {
             id

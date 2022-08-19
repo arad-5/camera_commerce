@@ -31,22 +31,8 @@
         @apply dark:bg-[#101010] bg-white transition-[background] duration-100;
     }
 
-    .image-container {
-        width: 100%;
-
-        > div {
-            position: unset !important;
-        }
-
-        .image {
-            object-fit: contain;
-            width: 100% !important;
-            position: relative !important;
-            height: unset !important;
-        }
-    }
     body.dark .swiper-pagination-bullet {
-        @apply bg-red-400 !important;
+        @apply bg-red-400 !important;  
     }
     .mx-auto .swiper-pagination-bullet {
         @apply bg-red-400 !important;

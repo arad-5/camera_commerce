@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ProductCardRow from '../../../../product/ProductCardRow'
+import ProductCardRow from '../product/ProductCardRow'
 import Image from 'next/image'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
